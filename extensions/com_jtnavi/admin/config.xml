@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<fieldset name="general" label="COM_JTNAVI_GENERAL">
+<field name="enabled" type="radio" layout="joomla.form.field.radio.switcher" label="JENABLED" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="use_starters" type="radio" layout="joomla.form.field.radio.switcher" label="COM_JTNAVI_STARTERS" description="COM_JTNAVI_STARTERS_DESC" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="search_articles" type="radio" layout="joomla.form.field.radio.switcher" label="COM_JTNAVI_ARTICLES" description="COM_JTNAVI_ARTICLES_DESC" default="1" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="categories" type="category" extension="com_content" multiple="true" label="COM_JTNAVI_CATEGORIES" description="COM_JTNAVI_CATEGORIES_DESC" filter="int_array" />
+<field name="result_limit" type="number" label="COM_JTNAVI_RESULT_LIMIT" default="5" min="1" max="8" filter="integer" />
+</fieldset>
+<fieldset name="sources" label="COM_JTNAVI_SOURCES">
+<field name="sources" type="subform" formsource="administrator/components/com_jtnavi/forms/source.xml" multiple="true" layout="joomla.form.field.subform.repeatable" label="COM_JTNAVI_SOURCES" description="COM_JTNAVI_SOURCES_DESC" buttons="add,remove,move" max="100" validate="Subform" />
+</fieldset>
+<fieldset name="ai" label="COM_JTNAVI_AI">
+<field name="ai_enabled" type="radio" layout="joomla.form.field.radio.switcher" label="COM_JTNAVI_AI_ENABLED" description="COM_JTNAVI_AI_DESC" default="0" filter="integer"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="api_key" type="password" maxlength="4096" label="COM_JTNAVI_API_KEY" description="COM_JTNAVI_API_KEY_DESC" filter="string" autocomplete="new-password" />
+<field name="model" type="text" label="COM_JTNAVI_MODEL" default="gpt-4.1-mini" description="COM_JTNAVI_MODEL_DESC" filter="string" maxlength="100" />
+<field name="daily_limit" type="number" label="COM_JTNAVI_DAILY_LIMIT" description="COM_JTNAVI_DAILY_LIMIT_DESC" default="50" min="0" max="10000" filter="integer" />
+<field name="session_limit" type="number" label="COM_JTNAVI_SESSION_LIMIT" default="10" min="1" max="100" filter="integer" />
+<field name="max_tokens" type="number" label="COM_JTNAVI_MAX_TOKENS" default="500" min="100" max="1000" filter="integer" />
+</fieldset>
+<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" validate="rules" component="com_jtnavi" section="component" />
+</fieldset>
+</config>

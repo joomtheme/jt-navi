@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+<name>COM_JTNAVI</name><creationDate>2026-09-11</creationDate><author>JoomTheme</author>
+<authorEmail>support@joomtheme.com</authorEmail><authorUrl>https://joomtheme.com</authorUrl>
+<copyright>(C) 2026 JoomTheme. All rights reserved.</copyright>
+<license>GNU General Public License version 2 or later</license><version>1.0.0</version><description>COM_JTNAVI_XML_DESCRIPTION</description>
+<element>com_jtnavi</element><namespace path="src">JoomTheme\Component\JtNavi</namespace>
+<scriptfile>script.php</scriptfile>
+<files folder="site"><folder>src</folder><folder>tmpl</folder></files>
+<languages folder="site/language"><language tag="en-GB">en-GB/com_jtnavi.ini</language><language tag="en-GB">en-GB/com_jtnavi.sys.ini</language><language tag="tr-TR">tr-TR/com_jtnavi.ini</language><language tag="tr-TR">tr-TR/com_jtnavi.sys.ini</language></languages>
+<administration><menu link="option=com_jtnavi">COM_JTNAVI</menu>
+<files folder="admin"><folder>services</folder><folder>src</folder><folder>tmpl</folder><folder>forms</folder><folder>sql</folder><filename>config.xml</filename><filename>access.xml</filename><filename>LICENSE.txt</filename></files>
+<languages folder="admin/language"><language tag="en-GB">en-GB/com_jtnavi.ini</language><language tag="en-GB">en-GB/com_jtnavi.sys.ini</language><language tag="tr-TR">tr-TR/com_jtnavi.ini</language><language tag="tr-TR">tr-TR/com_jtnavi.sys.ini</language></languages>
+</administration>
+<install><sql><file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file></sql></install>
+<uninstall><sql><file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file></sql></uninstall>
+<update><schemas><schemapath type="mysql">sql/updates/mysql</schemapath></schemas></update>
+</extension>

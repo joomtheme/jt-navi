@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<field name="title" type="text" label="COM_JTNAVI_SOURCE_TITLE" required="true" maxlength="160" filter="string" />
+<field name="url" type="url" label="COM_JTNAVI_SOURCE_URL" description="COM_JTNAVI_SOURCE_URL_DESC" required="true" relative="false" validate="url" filter="url" />
+<field name="summary" type="textarea" label="COM_JTNAVI_SOURCE_SUMMARY" description="COM_JTNAVI_SOURCE_SUMMARY_DESC" rows="4" filter="string" maxlength="3000" required="true" />
+<field name="keywords" type="text" label="COM_JTNAVI_SOURCE_KEYWORDS" filter="string" maxlength="500" />
+<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" default="*"><option value="*">JALL</option></field>
+</form>

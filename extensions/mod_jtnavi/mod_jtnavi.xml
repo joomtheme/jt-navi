@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade"><name>MOD_JTNAVI</name><creationDate>2026-09-11</creationDate><author>JoomTheme</author>
+<authorEmail>support@joomtheme.com</authorEmail><authorUrl>https://joomtheme.com</authorUrl>
+<copyright>(C) 2026 JoomTheme. All rights reserved.</copyright>
+<license>GNU General Public License version 2 or later</license><version>1.0.0</version>
+<description>MOD_JTNAVI_XML_DESCRIPTION</description><namespace path="src">JoomTheme\Module\JtNavi</namespace>
+<files><folder module="mod_jtnavi">services</folder><folder>src</folder><folder>tmpl</folder><filename>LICENSE.txt</filename></files>
+<languages folder="language"><language tag="en-GB">en-GB/mod_jtnavi.ini</language><language tag="en-GB">en-GB/mod_jtnavi.sys.ini</language><language tag="tr-TR">tr-TR/mod_jtnavi.ini</language><language tag="tr-TR">tr-TR/mod_jtnavi.sys.ini</language></languages>
+<media destination="mod_jtnavi" folder="media"><filename>joomla.asset.json</filename><folder>css</folder><folder>js</folder></media>
+<config><fields name="params"><fieldset name="basic">
+<field name="heading" type="text" label="MOD_JTNAVI_HEADING_LABEL" description="MOD_JTNAVI_HEADING_DESC" filter="string" maxlength="160" />
+<field name="display_mode" type="list" label="MOD_JTNAVI_MODE" default="inline"><option value="inline">MOD_JTNAVI_INLINE</option><option value="panel">MOD_JTNAVI_PANEL</option><option value="compact">MOD_JTNAVI_COMPACT</option></field>
+<field name="button_label" type="text" label="MOD_JTNAVI_BUTTON_LABEL" filter="string" maxlength="60" />
+</fieldset><fieldset name="suggestions" label="MOD_JTNAVI_SUGGESTIONS">
+<field name="suggestions_mode" type="list" label="MOD_JTNAVI_SUGGESTIONS_MODE" default="default">
+<option value="default">MOD_JTNAVI_SUGGESTIONS_DEFAULT</option><option value="custom">MOD_JTNAVI_SUGGESTIONS_CUSTOM</option><option value="none">JHIDE</option></field>
+<field name="suggestions" type="subform" label="MOD_JTNAVI_SUGGESTIONS" description="MOD_JTNAVI_SUGGESTIONS_DESC" multiple="true" max="8" layout="joomla.form.field.subform.repeatable" buttons="add,remove,move" validate="Subform" showon="suggestions_mode:custom">
+<form><field name="label" type="text" label="MOD_JTNAVI_SUGGESTION_LABEL" required="true" filter="string" maxlength="80" />
+<field name="query" type="text" label="MOD_JTNAVI_SUGGESTION_QUERY" required="true" filter="string" minlength="2" maxlength="500" /></form>
+</field></fieldset><fieldset name="advanced">
+<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" />
+<field name="cache" type="hidden" default="0" filter="integer" />
+</fieldset></fields></config></extension>

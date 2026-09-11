@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "mod_jtnavi",
+  "version": "1.0.0",
+  "description": "JT Navi frontend assets",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "mod_jtnavi.ui",
+      "type": "style",
+      "uri": "mod_jtnavi/navi.css"
+    },
+    {
+      "name": "mod_jtnavi.ui",
+      "type": "script",
+      "uri": "mod_jtnavi/navi.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    }
+  ]
+}
