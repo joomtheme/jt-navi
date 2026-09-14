@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" method="upgrade">
-<name>COM_JTNAVI</name><creationDate>2026-09-11</creationDate><author>JoomTheme</author>
+<name>COM_JTNAVI</name><creationDate>2026-09-14</creationDate><author>JoomTheme</author>
 <authorEmail>support@joomtheme.com</authorEmail><authorUrl>https://joomtheme.com</authorUrl>
 <copyright>(C) 2026 JoomTheme. All rights reserved.</copyright>
-<license>GNU General Public License version 2 or later</license><version>1.0.0</version><description>COM_JTNAVI_XML_DESCRIPTION</description>
+<license>GNU General Public License version 2 or later</license><version>1.0.1</version><description>COM_JTNAVI_XML_DESCRIPTION</description>
 <element>com_jtnavi</element><namespace path="src">JoomTheme\Component\JtNavi</namespace>
 <scriptfile>script.php</scriptfile>
 <files folder="site"><folder>src</folder><folder>tmpl</folder></files>

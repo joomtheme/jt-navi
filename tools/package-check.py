@@ -2,9 +2,11 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 import json,re
 R=Path(__file__).resolve().parents[1]
+version=ET.parse(R/'package/pkg_jtnavi.xml').getroot().findtext('version')
 for p in R.rglob('*.xml'):ET.parse(p)
 for base in (R/'extensions').iterdir():
  manifest=next(base.glob('*.xml')); tree=ET.parse(manifest).getroot()
+ assert tree.findtext('version')==version,(manifest,'version mismatch')
  for section in ['files','administration/files','languages','administration/languages','media']:
   el=tree.find(section)
   if el is not None:
@@ -44,5 +46,6 @@ for base in (R/'extensions').iterdir():
  if base.name.startswith('mod_'):
   data=json.loads((base/'media/joomla.asset.json').read_text())
   for asset in data['assets']:
+   assert asset.get('version')==version,(base,asset['name'],'asset version mismatch')
    assert (base/'media'/('css' if asset['type']=='style' else 'js')/Path(asset['uri']).name).is_file()
 print('PASS: XML, manifest files/languages/media/SQL/schema paths, direct-access guards, translations and asset references')

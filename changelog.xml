@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<changelogs><changelog><element>pkg_jtnavi</element><type>package</type><version>1.0.0</version>
+<changelogs><changelog><element>pkg_jtnavi</element><type>package</type><version>1.0.1</version>
+<fix><item>Open all source result links in a new tab while retaining the original question and guide.</item><item>Protect source links with noopener noreferrer and add English/Turkish screen-reader hints.</item><item>Set explicit script and stylesheet versions for browser cache refresh.</item></fix>
+<note><item>No database schema change; existing settings are preserved on upgrade.</item><item>Optional AI summaries remain experimental. Live validation of this exact package is pending.</item></note>
+</changelog><changelog><element>pkg_jtnavi</element><type>package</type><version>1.0.0</version>
 <new><item>First stable release of local source search and visitor guides.</item><item>Editable, reorderable module buttons and separate local and hosting installation guides.</item><item>English and Turkish interface with progressive source disclosure.</item><item>GitHub update server and changelog integration.</item></new>
 <fix><item>Database setup on fresh installation and missing usage counter recovery.</item><item>Long API key input and duplicate source guide label.</item><item>Package display name during uninstall.</item></fix>
 <note><item>Optional OpenAI summaries remain experimental, disabled by default on new installations. Successful live AI output has not yet been verified.</item><item>Existing settings are preserved when upgrading.</item></note>

@@ -50,7 +50,10 @@
                 const item = node('li', 'jtnavi__source');
                 const link = node('a', '', source.title);
                 link.href = url;
-                // Regular navigation avoids unexpected new windows.
+                // Keep the visitor's question and guide open in the original tab.
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.append(node('span', 'jtnavi__sr-only', ' (' + strings.new_tab + ')'));
                 item.append(link, node('p', '', source.summary || ''));
                 item.hidden = list.childElementCount >= 2;
                 list.append(item);

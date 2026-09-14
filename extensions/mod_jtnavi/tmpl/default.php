@@ -18,7 +18,7 @@ $mode = (string) $params->get('display_mode', 'inline');
 if (!in_array($mode, ['inline', 'panel', 'compact'], true)) { $mode = 'inline'; }
 $buttonLabel = trim((string) $params->get('button_label', '')) ?: Text::_('MOD_JTNAVI_OPEN');
 $strings = [];
-foreach (['LOADING', 'ERROR', 'AI_RESULT', 'LOCAL_RESULT', 'SOURCES', 'TIMEOUT', 'SHOW_MORE', 'SHOW_LESS'] as $key) {
+foreach (['LOADING', 'ERROR', 'AI_RESULT', 'LOCAL_RESULT', 'SOURCES', 'TIMEOUT', 'SHOW_MORE', 'SHOW_LESS', 'NEW_TAB'] as $key) {
     $strings[strtolower($key)] = Text::_('MOD_JTNAVI_' . $key);
 }
 ?>

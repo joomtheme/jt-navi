@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="package" method="upgrade"><name>JT Navi</name><creationDate>2026-09-11</creationDate><author>JoomTheme</author>
+<extension type="package" method="upgrade"><name>JT Navi</name><creationDate>2026-09-14</creationDate><author>JoomTheme</author>
 <authorEmail>support@joomtheme.com</authorEmail><authorUrl>https://joomtheme.com</authorUrl>
 <copyright>(C) 2026 JoomTheme. All rights reserved.</copyright>
-<license>GNU General Public License version 2 or later</license><version>1.0.0</version>
+<license>GNU General Public License version 2 or later</license><version>1.0.1</version>
 <packagename>jtnavi</packagename><packager>JoomTheme</packager><packagerurl>https://joomtheme.com</packagerurl>
 <description>PKG_JTNAVI_XML_DESCRIPTION</description><scriptfile>script.php</scriptfile>
 <blockChildUninstall>true</blockChildUninstall>

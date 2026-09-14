@@ -1,9 +1,35 @@
-# 1.0.0 validation status
+# 1.0.1 validation status
 
-Maintainer-reported live checks on Joomla 6.1.3 for 0.2.0-alpha1: fresh installation without database warning, in-place upgrade, component/module operation, custom button, local/hosting guides, site-language switching, mobile appearance, JED Checker and successful uninstall. Uninstall displayed the untranslated package name; 1.0.0 uses the literal brand name and administrator package language installation.
+## Checks performed on 14 September 2026
 
-Build checks for 1.0.0: PHP 8.3 syntax parsing for 18 files; source selection, distinct installation branches and custom-button fixtures; module template rendering; manifest paths, translations and ZIP integrity. DOM interactions were tested with mocked responses for 0.2.0-alpha1; frontend logic is unchanged in 1.0.0. These checks are not a full Joomla or accessibility audit.
+- Source review against Joomla 6.1 documentation and selected Joomla CMS 6.1.3 core files.
+- Existing live demo: hosting guide, installation environment choices, show-more source and missing link target confirmed. No live site files were changed.
+- All 18 PHP files parsed using php-parser with PHP 8.3 grammar. This is not `php -l` or PHP runtime execution; no PHP executable was available.
+- XML, manifest paths, SQL/schema paths, language key parity, direct-access guards and asset references checked with `python3 tools/package-check.py`.
+- JavaScript syntax checked with `node --check extensions/mod_jtnavi/media/js/navi.js`.
+- DOM regression check: local/AI source links, internal/external new-tab targets, opener/referrer protection, unsafe URL rejection, text escaping, show more/less, in-page choices, token submission and independent module instances. Network responses are mocked.
+- Deterministic package build, nested ZIP integrity, manifest version alignment and staged update SHA256 checked locally.
 
-Pending final live checks: 1.0.0 uninstall display name, final JED Checker, reachable update/changelog endpoints after publication, and a future version update through Joomla. Successful live AI output is unverified; AI remains experimental.
+## Reproduce
 
-For further acceptance: verify restricted/unpublished/expired articles never appear; test source/category filters, multiple modules, cache/SEF and keyboard access. AI calls require administrator enablement, configured key and visitor consent. Do not include keys or private content in bug reports.
+```sh
+python3 tools/package-check.py
+node --check extensions/mod_jtnavi/media/js/navi.js
+npm install --prefix /tmp/jtnavi-qa jsdom@30.0.1
+NODE_PATH=/tmp/jtnavi-qa/node_modules node tools/frontend-check.cjs
+python3 tools/build.py
+```
+
+The DOM test dependency is development-only and must not be shipped inside the Joomla extension.
+
+## Pending live acceptance for the exact 1.0.1 ZIP
+
+- Fresh install, 1.0.0-to-1.0.1 upgrade preserving options/custom buttons/sources, package removal and final JED Checker.
+- Click local article and external guide results: original tab/question remains open; destination opens separately. Include newly expanded cards and a successful AI result.
+- Joomla/CDN page cache refresh after upgrade; confirm the new versioned script is loaded. Update template overrides to include the new `NEW_TAB` translation string if overriding the module layout.
+- Atum dashboard/Options, Cassiopeia inline/panel/compact layouts, Turkish/English, mobile, keyboard, screen reader, multiple modules, SEF/subdirectory and multilingual routing.
+- Restricted, unpublished, expired, future-dated and restricted-parent articles must not appear. Check category/source filters and Turkish collation behavior.
+- Real OpenAI success, consent, quota and concurrency checks. AI remains experimental; no paid AI request was made during this review.
+- After the maintainer publishes: verify the release ZIP/hash and activate the staged update feed, then test an update through Joomla.
+
+Earlier maintainer-reported checks for the preceding alpha/1.0.0 work are historical evidence, not validation of the new 1.0.1 ZIP. See `AUDIT-1.0.1-TR.md` for scope and remaining limitations.

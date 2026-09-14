@@ -11,7 +11,7 @@ use Joomla\CMS\Router\Route;
 ?>
 <div class="container-fluid">
     <div class="card mb-4"><div class="card-body">
-        <h2>JT Navi <span class="badge bg-secondary">1.0.0</span></h2>
+        <h2>JT Navi <span class="badge bg-secondary">1.0.1</span></h2>
         <p class="lead"><?php echo Text::_('COM_JTNAVI_WELCOME'); ?></p>
         <p><?php echo Text::_('COM_JTNAVI_ALPHA'); ?></p>
         <a class="btn btn-primary" href="<?php echo Route::_('index.php?option=com_modules&view=modules&client_id=0&filter[module]=mod_jtnavi'); ?>"><?php echo Text::_('COM_JTNAVI_OPEN_MODULES'); ?></a>
