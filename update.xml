@@ -5,6 +5,7 @@
     <description>Visitor guides and local source search. Optional AI summaries are experimental.</description>
     <element>pkg_jtnavi</element>
     <type>package</type>
+    <client>site</client>
     <version>1.0.1</version>
     <infourl title="JT Navi">https://github.com/joomtheme/jt-navi/releases/tag/v1.0.1</infourl>
     <downloads>

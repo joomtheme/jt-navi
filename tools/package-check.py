@@ -49,3 +49,10 @@ for base in (R/'extensions').iterdir():
    assert asset.get('version')==version,(base,asset['name'],'asset version mismatch')
    assert (base/'media'/('css' if asset['type']=='style' else 'js')/Path(asset['uri']).name).is_file()
 print('PASS: XML, manifest files/languages/media/SQL/schema paths, direct-access guards, translations and asset references')
+
+# Joomla stores packages with client_id=0; omitted client defaults to administrator (1).
+for feed in [R/'update.xml', *sorted((R/'docs').glob('update-*.xml'))]:
+ for update in ET.parse(feed).getroot().findall('update'):
+  if update.findtext('type')=='package':
+   assert update.findtext('client')=='site',(feed,'package updates require explicit client=site')
+print('PASS: package update feeds explicitly target the site client')
