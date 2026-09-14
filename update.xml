@@ -1,11 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<updates><update>
-<name>JT Navi</name><description>Visitor guides and local source search. Optional AI summaries are experimental.</description>
-<element>pkg_jtnavi</element><type>package</type><version>1.0.0</version>
-<infourl title="JT Navi">https://github.com/joomtheme/jt-navi/releases/tag/v1.0.0</infourl>
-<downloads><downloadurl type="full" format="zip">https://github.com/joomtheme/jt-navi/releases/download/v1.0.0/pkg_jtnavi-1.0.0.zip</downloadurl></downloads>
-<sha256>f83c12696692d181c3bfeb565b8f36d5a9acfa0a32dc6c19fa4817e75cf8f80e</sha256>
-<tags><tag>stable</tag></tags><maintainer>JoomTheme</maintainer><maintainerurl>https://joomtheme.com</maintainerurl>
-<targetplatform name="joomla" version="6\.[0-9]+"/><php_minimum>8.3.0</php_minimum>
-<changelogurl>https://raw.githubusercontent.com/joomtheme/jt-navi/main/changelog.xml</changelogurl>
-</update></updates>
+<?xml version='1.0' encoding='utf-8'?>
+<updates>
+  <update>
+    <name>JT Navi</name>
+    <description>Visitor guides and local source search. Optional AI summaries are experimental.</description>
+    <element>pkg_jtnavi</element>
+    <type>package</type>
+    <version>1.0.1</version>
+    <infourl title="JT Navi">https://github.com/joomtheme/jt-navi/releases/tag/v1.0.1</infourl>
+    <downloads>
+      <downloadurl type="full" format="zip">https://github.com/joomtheme/jt-navi/releases/download/v1.0.1/pkg_jtnavi-1.0.1.zip</downloadurl>
+    </downloads>
+    <sha256>45facd8b9c0ca199e0d970c24b03b4696248ac98f35c90a6d8d75a405973843c</sha256>
+    <tags>
+      <tag>stable</tag>
+    </tags>
+    <maintainer>JoomTheme</maintainer>
+    <maintainerurl>https://joomtheme.com</maintainerurl>
+    <targetplatform name="joomla" version="6\.[0-9]+" />
+    <php_minimum>8.3.0</php_minimum>
+    <changelogurl>https://raw.githubusercontent.com/joomtheme/jt-navi/main/changelog.xml</changelogurl>
+  </update>
+</updates>
