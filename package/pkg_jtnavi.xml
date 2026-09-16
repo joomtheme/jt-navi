@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="package" method="upgrade"><name>JT Navi</name><creationDate>2026-09-14</creationDate><author>JoomTheme</author>
+<extension type="package" method="upgrade"><name>PKG_JTNAVI</name><creationDate>2026-09-14</creationDate><author>JoomTheme</author>
 <authorEmail>support@joomtheme.com</authorEmail><authorUrl>https://joomtheme.com</authorUrl>
 <copyright>(C) 2026 JoomTheme. All rights reserved.</copyright>
 <license>GNU General Public License version 2 or later</license><version>1.0.1</version>
@@ -7,7 +7,7 @@
 <description>PKG_JTNAVI_XML_DESCRIPTION</description><scriptfile>script.php</scriptfile>
 <blockChildUninstall>true</blockChildUninstall>
 <files folder="packages"><file type="component" id="com_jtnavi">com_jtnavi.zip</file><file type="module" id="mod_jtnavi" client="site">mod_jtnavi.zip</file></files>
-<languages folder="language" client="administrator"><language tag="en-GB">en-GB/pkg_jtnavi.sys.ini</language><language tag="tr-TR">tr-TR/pkg_jtnavi.sys.ini</language></languages>
+<languages folder="language"><language tag="en-GB" client="administrator">en-GB/pkg_jtnavi.sys.ini</language><language tag="tr-TR" client="administrator">tr-TR/pkg_jtnavi.sys.ini</language></languages>
 <changelogurl>https://raw.githubusercontent.com/joomtheme/jt-navi/main/changelog.xml</changelogurl>
 <updateservers><server type="extension" priority="1" name="JT Navi Updates">https://raw.githubusercontent.com/joomtheme/jt-navi/main/update.xml</server></updateservers>
 </extension>
