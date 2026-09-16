@@ -3,7 +3,7 @@
 Visitor guides and local source search for Joomla 6, by [JoomTheme](https://joomtheme.com).
 
 ## Install
-Version 1.0.1 is prepared in this branch. Download the published installable package from [Releases](https://github.com/joomtheme/jt-navi/releases), or build `pkg_jtnavi-1.0.1.zip` from source.
+Version 1.0.1 is available from [Releases](https://github.com/joomtheme/jt-navi/releases/tag/v1.0.1). Download the installable `pkg_jtnavi-1.0.1.zip` asset.
 Upload the ZIP through Joomla's extension installer. Do not install GitHub's automatically generated source archives.
 Requires Joomla 6.x, PHP 8.3+, and MySQL or MariaDB.
 Install over an existing JT Navi installation to preserve settings. Uninstall removes its stored data.
@@ -42,16 +42,17 @@ Run `python3 tools/build.py` (Python 3 standard library only).
 The installable archive is written to `dist/`. Run `python3 tools/package-check.py` for structural checks.
 
 ## Validation
-Reviewed against Joomla 6.1.3 and the official Joomla 6.1 documentation on 14 September 2026.
-Local package checks, PHP grammar parsing and mocked DOM regression checks passed.
-The exact 1.0.1 ZIP still needs live installation/upgrade/removal and JED Checker acceptance.
-Successful paid AI output remains unverified. See [testing](docs/TESTING.md) and the [Turkish audit](docs/AUDIT-1.0.1-TR.md).
+The maintainer confirmed that the corrected 1.0.1 release package passed JED Checker on 16 September 2026 and reported Joomla's successful package-uninstallation message. Passing JED Checker is a technical check, not JED listing approval.
+
+Local package checks and the reproducible build passed for the corrected package. Earlier source checks included PHP grammar parsing and mocked DOM regression tests; these do not replace live runtime testing.
+
+The published ZIP's SHA256 matches the checksum in the live update feed. Full live upgrade testing and successful paid AI output remain unverified. See [testing](docs/TESTING.md) for completed checks and remaining test coverage.
 
 ## Known scope
 Search covers public article titles/introductions and configured source summaries, not full-site semantic search.
 Installation intent uses keyword rules and may confuse extension installation with Joomla installation.
 Each question is independent; there is no conversational memory. PostgreSQL is not supported.
-The live update feed remains on 1.0.0 until the maintainer publishes the new ZIP; a staged 1.0.1 feed is in `docs/update-1.0.1.xml`.
+The live update feed points to the published 1.0.1 package.
 
 ## License and support
 GNU GPL version 2 or later; see LICENSE.txt.
